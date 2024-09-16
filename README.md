@@ -4,6 +4,10 @@ pythonはインストール済みとする
 ```
 python -m venv venv  
 ```
+
+```
+git clone -b master  https://github.com/bintorooic/tanukeshi.git
+```
 # 仮想環境の有効化  
 - MacOS/Linux
 ```
