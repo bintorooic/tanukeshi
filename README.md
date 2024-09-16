@@ -6,7 +6,7 @@ python -m venv venv
 ```
 
 ```
-git clone -b master  https://github.com/bintorooic/tanukeshi.git
+git clone https://github.com/bintorooic/tanukeshi.git
 ```
 # 仮想環境の有効化  
 - MacOS/Linux
@@ -19,7 +19,11 @@ source venv/bin/activate
 ```
 ※仮想環境の取り扱い方法詳細はvenvでぐぐってください
 
+
 # 依存関係のインストール  
+```
+cd tanukeshi
+```
 ```
 pip install -r requirements.txt  
 ```
