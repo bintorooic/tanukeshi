@@ -15,3 +15,6 @@ pip install -r requirements.txt
 
 # 実行
 python main.py
+
+リプライ欄を削除する場合はこちらを実行
+python deleteReply.py
