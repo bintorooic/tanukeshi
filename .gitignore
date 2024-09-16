@@ -29,3 +29,6 @@ Thumbs.db
 build/
 dist/
 *.egg-info/
+
+# 設定ファイル
+setting.conf
