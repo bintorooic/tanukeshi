@@ -1,5 +1,3 @@
-import datetime
-import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -7,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from bs4 import BeautifulSoup
-import os
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
 from selenium.webdriver.common.keys import Keys
 
@@ -27,9 +24,9 @@ from selenium.webdriver.common.keys import Keys
 # params###################################################
 # #########################################################
 # 自分のアカウント名を指定
-twitter_username = "YOUR_TWITTER_USERNAME"
+twitter_username = "YOURACCOUNT"
 # 削除したい件数を指定　50まで動作確認済み。
-loop_counter = 50
+loop_counter = 2500
 # #########################################################
 
 
@@ -85,8 +82,12 @@ def clear_rt():
     # article要素内の3つ目のボタンを見つけてクリック
     buttons = article.find_elements(By.TAG_NAME, "button")
     if len(buttons) >= 3:
-        buttons[2].click()
-        print("記事内の3つ目のボタンをクリックしました")
+        if len(buttons) == 6:
+            buttons[2].click()
+        elif len(buttons) == 7:
+            buttons[3].click()
+        else:
+            raise Exception("未対応のツイートパターンです。")
         
         # "ポストを取り消す"テキストを持つメニュー項目を探してクリック
         menu_items = WebDriverWait(driver, 10).until(
