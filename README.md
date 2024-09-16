@@ -12,8 +12,9 @@ source venv/bin/activate  # MacOS/Linux
 pip install -r requirements.txt  
 
 ＊Chromeのデバッグモードでツイッターを開く
+```
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --new-window "https://x.com/" --remote-debugging-port=9222　#Windows　　#macはぐぐれ  
-
+```
 
 # 実行
 自ツイート、RTの取り消し  
