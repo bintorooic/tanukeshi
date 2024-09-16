@@ -7,6 +7,7 @@ import time
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
 from selenium.webdriver.common.keys import Keys
+import configparser
 
 
 '''
@@ -21,13 +22,16 @@ from selenium.webdriver.common.keys import Keys
 ソースコード一番上のtwitter_usernameと削除する件数を指定して下さい。
 '''
 
+# 設定ファイルを読み込む
+config = configparser.ConfigParser()
+config.read('setting.conf')
+
 # params###################################################
 # #########################################################
-# 自分のアカウント名を指定
-twitter_username = "YOURACCOUNT"
 # 削除したい件数を指定　50まで動作確認済み。
 loop_counter = 2500
 # #########################################################
+twitter_username = config['Twitter']['username']
 
 
 

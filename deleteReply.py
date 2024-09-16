@@ -7,7 +7,11 @@ import time
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
 from selenium.webdriver.common.keys import Keys
+import configparser
 
+# 設定ファイルを読み込む
+config = configparser.ConfigParser()
+config.read('setting.conf')
 
 '''
 # Chromeをポートを指定してデバッグモードで起動してください。※Chromeのウィンドウを一度すべて閉じてから実施。
@@ -21,10 +25,9 @@ from selenium.webdriver.common.keys import Keys
 ソースコード一番上のtwitter_usernameを指定して下さい。
 '''
 
-# params###################################################
 # #########################################################
 # 自分のアカウント名を指定
-twitter_username = "YOUR_ACCOUT_NAME"
+twitter_username = config['Twitter']['username']
 
 # #########################################################
 
