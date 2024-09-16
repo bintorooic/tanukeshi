@@ -14,7 +14,18 @@ pip install -r requirements.txt
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --new-window "https://x.com/" --remote-debugging-port=9222　#Windows　#macはぐぐれ
 
 # 実行
+
+仮想環境の立ち上げ
+
+venv/bin/activate # MacOS/Linux
+venv/Scripts/Activate.ps1
+※仮想環境の取り扱い方法詳細はvenvでぐぐってください
+
+自ツイート、RTの取り消し
 python main.py
 
-リプライ欄を削除する場合はこちらを実行
+リプライ欄の削除、RTの取り消し
 python deleteReply.py
+
+スクリプトを途中で止めたいとき:
+Ctrl+c
