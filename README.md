@@ -29,7 +29,9 @@ pip install -r requirements.txt
 ```
 
 # Configの設定
-username = 自分のアカウント名　※@は不要。
+setting.conf.exampleをsetting.confにリネームします。（.exampleを削除）
+
+username = 自分のアカウント名　※@は不要。を記入してください。
 
 # Chromeの立ち上げ
 ＊Chromeのデバッグモードでツイッターを開く #Windows #macはぐぐれ  
